@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/assets.css">
+  <link rel="stylesheet" href="./shaurma.css">
+  <title>Grid საშაურმე!</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="top">
+      <header class="hero">
+        <h1>CSS Grid შაურმა</h1>
+        <p>შაურმა ნაკლები ბაგით!</p>
+      </header>
+      <div class="cta cta1">
+        <p class="price">₾1.99</p>
+        <p>სტანდარტული</p>
+      </div>
+      <div class="cta cta2">
+        <p class="price">₾3.99</p>
+        <p>დიდი</p>
+      </div>
+
+    </div>
+    <nav class="menu">
+      <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        მენიუ
+      </button>
+      <ul id="menu-list">
+        <li>
+          <a href="">შაურმა</a>
+        </li>
+        <li>
+          <a href="">ლუდი</a>
+        </li>
+        <li>
+          <a href="">ღვინო</a>
+        </li>
+        <li>
+          <a href="">დესერტი</a>
+        </li>
+        <li>
+          <a href="">დაჯავშნა</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="features">
+      <div class="feature">
+        <span class="icon">🌮</span>
+        <h3>შაურმა</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍺</span>
+        <h3>ლუდი</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍷</span>
+        <h3>ღვინო</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🎵</span>
+        <h3>მუსიკა</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <img src="images/queso-taco.jpeg" alt="Yummy Taco" class="about__mockup">
+      <div class="about__details">
+        <h2>კვირის შაურმა</h2>
+        <p>მეტი ხორცით, სალათის ფოთლებით და რაღაცით</p>
+        <p>ეს ის არარის რაც შენ გგონია</p>
+        <button>დეტალურად →</button>
+      </div>
+    </section>
+
+
+    <section class="gallery">
+      <h2>ინტიგრამი</h2>
+      <img src="https://source.unsplash.com/random/201x201" alt="">
+      <img src="https://source.unsplash.com/random/202x202" alt="">
+      <img src="https://source.unsplash.com/random/203x203" alt="">
+      <img src="https://source.unsplash.com/random/204x204" alt="">
+      <img src="https://source.unsplash.com/random/205x205" alt="">
+      <img src="https://source.unsplash.com/random/206x206" alt="">
+      <img src="https://source.unsplash.com/random/207x207" alt="">
+      <img src="https://source.unsplash.com/random/207x208" alt="">
+      <img src="https://source.unsplash.com/random/207x209" alt="">
+      <img src="https://source.unsplash.com/random/207x210" alt="">
+    </section>
+  </div>
+
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
+</body>
+
+</html>
